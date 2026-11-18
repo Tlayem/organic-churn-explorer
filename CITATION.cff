@@ -3,6 +3,7 @@ message: "If you use this resource, please cite it as below."
 type: software
 title: "The Organic Certification Churn Explorer"
 version: "1.0.0"
+doi: "10.5281/zenodo.24346399"
 date-released: "2026-11-18"
 url: "https://tlayem.github.io/organic-churn-explorer/"
 repository-code: "https://github.com/Tlayem/organic-churn-explorer"

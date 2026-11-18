@@ -28,4 +28,4 @@ Nothing is published until every box is ticked by Taiwo Fausiyat Adesiyan.
 
 ## Before publishing
 - [x] DRAFT banner removed from `index.html` and README.
-- [ ] `python code/publish_gate.py . --allow-draft-in docs/ code/publish_gate.py` passes, apart from the DOI tag filled in after Zenodo mints it.
+- [x] Publish gate clear (18 Nov 2026; only flag is the README DOI badge markdown). Released v1.0.0; Zenodo DOI 10.5281/zenodo.24346399.
