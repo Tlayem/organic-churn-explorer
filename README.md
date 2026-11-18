@@ -3,7 +3,7 @@
 An interactive public resource showing how many U.S. organic operations become certified each year, how many leave, and whether the certified base is growing, by **state**, **certification scope**, **commodity group** and **certifier**, 2018–2026.
 
 **Live site:** https://tlayem.github.io/organic-churn-explorer/
-**Cite:** Adesiyan, T. F. (2026). *The Organic Certification Churn Explorer* (Version 1.0.0) [Interactive data resource]. [VERIFY: Zenodo DOI after release]
+**Cite:** Adesiyan, T. F. (2026). *The Organic Certification Churn Explorer* (Version 1.0.0) [Interactive data resource]. https://tlayem.github.io/organic-churn-explorer/
 
 Built on [The U.S. Organic Certification Panel v1.0.0](https://doi.org/10.5281/zenodo.23130740) (Adesiyan, 2026), which reconstructs every operation's certification history from eleven USDA Organic INTEGRITY Database (OID) snapshots, 16 March 2017 to 1 October 2026.
 
