@@ -1,0 +1,1 @@
+2026-11-02T00:36:35Z	git clone https://github.com/Tlayem/us-organic-certification-panel.git (tag v1.0.0, commit 0468be4) -> data/processed/ocp_spells.csv.gz	22730386	sha256=c4d3672bdddd2c1023f9197ab470f62efb6c4c9df4b506625eeaa667ce1041ed	md5=15025d1716880d50937bf3537f7573cb

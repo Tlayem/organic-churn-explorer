@@ -1,0 +1,37 @@
+{
+  "title": "The Organic Certification Churn Explorer",
+  "upload_type": "software",
+  "description": "<p>The Organic Certification Churn Explorer is an interactive public resource that shows how many U.S. organic operations become certified each year, how many leave, and whether the certified base is growing, by state, certification scope, commodity group and certifier, from 2018 to 2026. It runs as a static website at https://tlayem.github.io/organic-churn-explorer/.</p><p>It is built on The U.S. Organic Certification Panel v1.0.0 (doi:10.5281/zenodo.23130739), which reconstructs each operation's certification spells from eleven USDA Organic INTEGRITY Database snapshots taken between March 2017 and October 2026. Entries exclude moves between certifiers; exits are surrenders, suspensions, revocations and drops from the listing. Commodity groups are assigned from OID product lists by published keyword rules. The archive contains the site, the yearly tables by state, commodity group and certifier, the build and QA code, and a codebook.</p><p>Source data: USDA AMS National Organic Program, Organic INTEGRITY Database (U.S. public domain). USDA does not endorse this resource. Code MIT; derived data CC BY 4.0.</p>",
+  "creators": [
+    {
+      "name": "Adesiyan, Taiwo Fausiyat",
+      "orcid": "0000-0002-2023-3624",
+      "affiliation": "Middle Tennessee State University, Murfreesboro, Tennessee, USA"
+    }
+  ],
+  "license": "mit",
+  "access_right": "open",
+  "version": "1.0.0",
+  "language": "eng",
+  "keywords": [
+    "organic agriculture",
+    "organic certification",
+    "USDA National Organic Program",
+    "Organic INTEGRITY Database",
+    "firm entry and exit",
+    "data visualization",
+    "interactive map"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.23130739",
+      "relation": "isDerivedFrom",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "https://tlayem.github.io/organic-churn-explorer/",
+      "relation": "isSupplementedBy",
+      "scheme": "url"
+    }
+  ]
+}

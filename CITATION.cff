@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: "If you use this resource, please cite it as below."
+type: software
+title: "The Organic Certification Churn Explorer"
+version: "1.0.0"
+date-released: "2026-11-01"
+url: "https://tlayem.github.io/organic-churn-explorer/"
+repository-code: "https://github.com/Tlayem/organic-churn-explorer"
+authors:
+  - family-names: "Adesiyan"
+    given-names: "Taiwo Fausiyat"
+    orcid: "https://orcid.org/0000-0002-2023-3624"
+    email: "adesiyanfausiyat010@gmail.com"
+    affiliation: "Middle Tennessee State University, Murfreesboro, Tennessee, USA"
+license: MIT
+abstract: >-
+  Interactive explorer of entry, exit and net change in U.S. organic certification by state,
+  certification scope, commodity group and certifier, 2018 to 2026, built on The U.S. Organic
+  Certification Panel (USDA Organic INTEGRITY Database snapshots).
+keywords:
+  - organic agriculture
+  - organic certification
+  - USDA National Organic Program
+  - Organic INTEGRITY Database
+  - firm entry and exit
+  - data visualization
+references:
+  - type: dataset
+    title: "The U.S. Organic Certification Panel"
+    version: "1.0.0"
+    doi: "10.5281/zenodo.23130739"
+    authors:
+      - family-names: "Adesiyan"
+        given-names: "Taiwo Fausiyat"
+    year: 2026

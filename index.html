@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Organic Certification Churn Explorer</title>
+<meta name="description" content="Entry, exit and net change in U.S. organic certification by state, commodity and certifier, 2018–2026, from The U.S. Organic Certification Panel.">
+<meta name="author" content="Taiwo Fausiyat Adesiyan">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <h1>The Organic Certification Churn Explorer</h1>
+    <p>How many U.S. organic operations become certified each year, how many leave, and whether the certified base is growing. Built for researchers, certifiers and policymakers tracking the organic sector, it can be filtered by state, scope, commodity group and certifier.</p>
+    <p class="byline">Taiwo Fausiyat Adesiyan · Middle Tennessee State University · Built on <a href="https://doi.org/10.5281/zenodo.23130740">The U.S. Organic Certification Panel v1.0.0</a> (USDA Organic INTEGRITY Database snapshots, Mar 2017 – Oct 2026)</p>
+  </header>
+
+  <section class="filters" aria-label="Filters">
+    <label>Years
+      <span class="yr"><select id="fFrom" aria-label="From year"></select><span>to</span><select id="fTo" aria-label="To year"></select></span>
+    </label>
+    <label>State<select id="fState"></select></label>
+    <label>Scope<select id="fScope"></select></label>
+    <label>Commodity group<select id="fGroup"></select></label>
+    <label>Certifier<select id="fCert"></select></label>
+    <button id="reset" type="button">Reset</button>
+  </section>
+
+  <div class="tiles" id="tiles" aria-live="polite"></div>
+  <p class="scope-note" id="scopeNote"></p>
+
+  <div class="grid2">
+    <section class="card">
+      <h2>Entries, exits and net change by year</h2>
+      <p class="sub">Entries above the line, exits below; the line is net change. 2026 covers January–September.</p>
+      <div class="legend"><span><i style="background:var(--entry)"></i>Entries</span><span><i style="background:var(--exit)"></i>Exits</span><span><i class="line" style="background:var(--ink)"></i>Net change</span></div>
+      <div id="ts"></div>
+    </section>
+    <section class="card">
+      <h2>By state</h2>
+      <div class="mapctl">Colour by
+        <select id="mapMeasure">
+          <option value="netrate">Net change rate</option>
+          <option value="entryrate">Entry rate</option>
+          <option value="exitrate">Exit rate</option>
+          <option value="net">Net change (count)</option>
+        </select>
+        <span>Click a state to filter.</span>
+      </div>
+      <div class="tilemap" id="map" role="group" aria-label="State tile map"></div>
+      <div class="scale" id="mapScale"></div>
+    </section>
+  </div>
+
+  <div class="grid2">
+    <section class="card">
+      <h2>How operations left</h2>
+      <p class="sub">Exits in the selected years by type. Moves to another certifier are not exits; they are shown for reference.</p>
+      <div class="hbars" id="xtypes"></div>
+    </section>
+    <section class="card">
+      <h2>Stock of certified operations</h2>
+      <p class="sub">Operations holding certification on 1 January (1 October for the last point).</p>
+      <div id="stock"></div>
+    </section>
+  </div>
+
+  <section class="card">
+    <h2>Compare</h2>
+    <div class="tabctl">
+      <div class="seg" role="group" aria-label="Compare by">
+        <button type="button" data-dim="state" aria-pressed="true">States</button><button type="button" data-dim="group" aria-pressed="false">Commodity groups</button><button type="button" data-dim="scope" aria-pressed="false">Scopes</button><button type="button" data-dim="cert" aria-pressed="false">Certifiers</button>
+      </div>
+      <a href="#" class="dl" id="dlTable">Download this table (CSV)</a>
+    </div>
+    <p class="sub" id="tabNote"></p>
+    <div class="tablewrap"><table id="tab"></table></div>
+    <button class="more" id="more" type="button"></button>
+  </section>
+
+  <section class="card methods" id="methods">
+    <h2>Methods</h2>
+    <p>The explorer counts certification spells of U.S.-located operations in <a href="https://doi.org/10.5281/zenodo.23130740">The U.S. Organic Certification Panel</a> (v1.0.0), which reconstructs each operation's history from eleven USDA Organic INTEGRITY Database (OID) snapshots taken between 16 March 2017 and 1 October 2026. A spell runs from the date an operation became certified to the date it surrendered, was suspended or revoked, or disappeared from the listing. The explorer uses the 59,988 U.S. spells that were still active on 1 January 2018 or began later; spells that ended earlier cannot affect any year shown, which is why this count is below the panel's 66,279 U.S. operations.</p>
+    <dl>
+      <dt>Entry</dt><dd>A spell that starts in the year and is not the continuation of an earlier spell. When an operation moves to a new certifier it gets a new Operation ID; that move is a transfer, not an entry.</dd>
+      <dt>Exit</dt><dd>A spell that ends in the year as surrendered, suspended, revoked or dropped from the listing. Moves to a new certifier are excluded.</dd>
+      <dt>Net change</dt><dd>Entries minus exits. In the certifier view, the table also shows transfers in and out and a net figure that includes them.</dd>
+      <dt>Stock</dt><dd>Operations with a known start before 1 January and no exit before that date.</dd>
+      <dt>Entry and exit rates</dt><dd>Entries (exits) divided by the stock on 1 January, pooled over the selected years: total entries ÷ total stock-years. Net change rate is the entry rate minus the exit rate, each rounded to one decimal place, so the figures shown add up. States with fewer than 30 stock-years are hatched and not coloured.</dd>
+      <dt>Scope</dt><dd>OID's four certification scopes (crops, livestock, wild crops, handling), counted if certified at any point in the spell. An operation can hold several.</dd>
+      <dt>Commodity group</dt><dd>Assigned from the crops, livestock and wild-crops product lists by published keyword rules (<a href="code/commodity_rules.json">commodity_rules.json</a>). An operation is counted in every group it lists, so groups overlap and do not add up to the total. Handlers' product lists are not classified; use the Handling scope for them.</dd>
+      <dt>Certifier</dt><dd>The NOP certifier ID (first three digits of the Operation ID), labelled with the certifier's most recent name in OID. ID 000 is OID's placeholder certifier, "Transitioning to New Certifier", which holds operations while they move between certifiers.</dd>
+    </dl>
+    <h3>Limits</h3>
+    <p>Years before 2018 are not shown: the first snapshot is from 16 March 2017, and OID appears to drop surrendered operations after a few years (the January 2026 export goes back only to 2023), so earlier exits cannot be recovered. Some operations were first seen already surrendered or suspended; their exits are counted but, with no known start, they are not in the stock, so exit rates are slightly overstated in 2020–2022. "Dropped from listing" exits are dated by the first snapshot in which the operation is missing, so they can lag the true date by up to a year. Commodity lists are cumulative over each spell. Counts for 2026 cover only January to September.</p>
+    <h3>Cite</h3>
+    <div class="cite" id="cite">Adesiyan, T. F. (2026). <i>The Organic Certification Churn Explorer</i> (Version 1.0.0) [Interactive data resource]. https://tlayem.github.io/organic-churn-explorer/. [VERIFY: Zenodo DOI after release]<br>Data: Adesiyan, T. F. (2026). <i>The U.S. Organic Certification Panel</i> (Version 1.0.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.23130740</div>
+    <h3>Download</h3>
+    <p>Yearly tables: <a href="data/churn_state_year.csv">by state</a> · <a href="data/churn_group_year.csv">by scope and commodity group</a> · <a href="data/churn_certifier_year.csv">by certifier</a> · <a href="data/spells.json">spell-level file used by this page</a> · <a href="https://github.com/Tlayem/organic-churn-explorer">code on GitHub</a>. Data CC BY 4.0, code MIT.</p>
+  </section>
+
+  <footer>Source: USDA AMS National Organic Program, Organic INTEGRITY Database (public domain), via The U.S. Organic Certification Panel. This site is independent research and is not produced or endorsed by USDA.</footer>
+</div>
+<div id="tip" role="tooltip"></div>
+<script src="assets/app.js"></script>
+</body>
+</html>

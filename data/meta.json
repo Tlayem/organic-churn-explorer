@@ -1,0 +1,616 @@
+{
+ "title": "The Organic Certification Churn Explorer",
+ "version": "1.0.0",
+ "source": {
+  "name": "The U.S. Organic Certification Panel",
+  "version": "1.0.0",
+  "doi": "10.5281/zenodo.23130740",
+  "concept_doi": "10.5281/zenodo.23130739",
+  "file": "ocp_spells.csv.gz",
+  "md5": "15025d1716880d50937bf3537f7573cb"
+ },
+ "first_snapshot": "2017-03-16",
+ "last_snapshot": "2026-10-01",
+ "years": [
+  2018,
+  2019,
+  2020,
+  2021,
+  2022,
+  2023,
+  2024,
+  2025,
+  2026
+ ],
+ "partial_year": 2026,
+ "states": [
+  {
+   "name": "Alabama",
+   "abbr": "AL"
+  },
+  {
+   "name": "Alaska",
+   "abbr": "AK"
+  },
+  {
+   "name": "Arizona",
+   "abbr": "AZ"
+  },
+  {
+   "name": "Arkansas",
+   "abbr": "AR"
+  },
+  {
+   "name": "California",
+   "abbr": "CA"
+  },
+  {
+   "name": "Colorado",
+   "abbr": "CO"
+  },
+  {
+   "name": "Connecticut",
+   "abbr": "CT"
+  },
+  {
+   "name": "Delaware",
+   "abbr": "DE"
+  },
+  {
+   "name": "District of Columbia",
+   "abbr": "DC"
+  },
+  {
+   "name": "Florida",
+   "abbr": "FL"
+  },
+  {
+   "name": "Georgia",
+   "abbr": "GA"
+  },
+  {
+   "name": "Hawaii",
+   "abbr": "HI"
+  },
+  {
+   "name": "Idaho",
+   "abbr": "ID"
+  },
+  {
+   "name": "Illinois",
+   "abbr": "IL"
+  },
+  {
+   "name": "Indiana",
+   "abbr": "IN"
+  },
+  {
+   "name": "Iowa",
+   "abbr": "IA"
+  },
+  {
+   "name": "Kansas",
+   "abbr": "KS"
+  },
+  {
+   "name": "Kentucky",
+   "abbr": "KY"
+  },
+  {
+   "name": "Louisiana",
+   "abbr": "LA"
+  },
+  {
+   "name": "Maine",
+   "abbr": "ME"
+  },
+  {
+   "name": "Maryland",
+   "abbr": "MD"
+  },
+  {
+   "name": "Massachusetts",
+   "abbr": "MA"
+  },
+  {
+   "name": "Michigan",
+   "abbr": "MI"
+  },
+  {
+   "name": "Minnesota",
+   "abbr": "MN"
+  },
+  {
+   "name": "Mississippi",
+   "abbr": "MS"
+  },
+  {
+   "name": "Missouri",
+   "abbr": "MO"
+  },
+  {
+   "name": "Montana",
+   "abbr": "MT"
+  },
+  {
+   "name": "Nebraska",
+   "abbr": "NE"
+  },
+  {
+   "name": "Nevada",
+   "abbr": "NV"
+  },
+  {
+   "name": "New Hampshire",
+   "abbr": "NH"
+  },
+  {
+   "name": "New Jersey",
+   "abbr": "NJ"
+  },
+  {
+   "name": "New Mexico",
+   "abbr": "NM"
+  },
+  {
+   "name": "New York",
+   "abbr": "NY"
+  },
+  {
+   "name": "North Carolina",
+   "abbr": "NC"
+  },
+  {
+   "name": "North Dakota",
+   "abbr": "ND"
+  },
+  {
+   "name": "Ohio",
+   "abbr": "OH"
+  },
+  {
+   "name": "Oklahoma",
+   "abbr": "OK"
+  },
+  {
+   "name": "Oregon",
+   "abbr": "OR"
+  },
+  {
+   "name": "Pennsylvania",
+   "abbr": "PA"
+  },
+  {
+   "name": "Puerto Rico",
+   "abbr": "PR"
+  },
+  {
+   "name": "Rhode Island",
+   "abbr": "RI"
+  },
+  {
+   "name": "South Carolina",
+   "abbr": "SC"
+  },
+  {
+   "name": "South Dakota",
+   "abbr": "SD"
+  },
+  {
+   "name": "Tennessee",
+   "abbr": "TN"
+  },
+  {
+   "name": "Texas",
+   "abbr": "TX"
+  },
+  {
+   "name": "U.S. Virgin Islands",
+   "abbr": "VI"
+  },
+  {
+   "name": "Utah",
+   "abbr": "UT"
+  },
+  {
+   "name": "Vermont",
+   "abbr": "VT"
+  },
+  {
+   "name": "Virginia",
+   "abbr": "VA"
+  },
+  {
+   "name": "Washington",
+   "abbr": "WA"
+  },
+  {
+   "name": "West Virginia",
+   "abbr": "WV"
+  },
+  {
+   "name": "Wisconsin",
+   "abbr": "WI"
+  },
+  {
+   "name": "Wyoming",
+   "abbr": "WY"
+  }
+ ],
+ "certifiers": [
+  {
+   "code": "000",
+   "label": "000 \u00b7 Transitioning to New Certifier (OID placeholder)"
+  },
+  {
+   "code": "120",
+   "label": "120 \u00b7 Kiwa BCS \u00d6ko-Garantie GmbH"
+  },
+  {
+   "code": "146",
+   "label": "146 \u00b7 Montana Department of Agriculture"
+  },
+  {
+   "code": "156",
+   "label": "156 \u00b7 Primus Auditing Operations"
+  },
+  {
+   "code": "158",
+   "label": "158 \u00b7 Georgia Crop Improvement Association"
+  },
+  {
+   "code": "160",
+   "label": "160 \u00b7 Ohio Ecological Food and Farm Association"
+  },
+  {
+   "code": "178",
+   "label": "178 \u00b7 Control Union Certifications B.V."
+  },
+  {
+   "code": "217",
+   "label": "217 \u00b7 Idaho State Department of Agriculture"
+  },
+  {
+   "code": "219",
+   "label": "219 \u00b7 Istituto per la Certificazione Etica e Ambientale"
+  },
+  {
+   "code": "220",
+   "label": "220 \u00b7 Baystate Organic Certifiers"
+  },
+  {
+   "code": "223",
+   "label": "223 \u00b7 QIMA (formerly IBD Certifications)"
+  },
+  {
+   "code": "258",
+   "label": "258 \u00b7 OneCert, Inc."
+  },
+  {
+   "code": "278",
+   "label": "278 \u00b7 Washington State Department of Agriculture"
+  },
+  {
+   "code": "325",
+   "label": "325 \u00b7 NOFA-NY Certified Organic, LLC"
+  },
+  {
+   "code": "351",
+   "label": "351 \u00b7 Texas Department of Agriculture"
+  },
+  {
+   "code": "353",
+   "label": "353 \u00b7 Mayacert S.A."
+  },
+  {
+   "code": "367",
+   "label": "367 \u00b7 Minnesota Crop Improvement Association"
+  },
+  {
+   "code": "392",
+   "label": "392 \u00b7 Global Organic Alliance, Inc"
+  },
+  {
+   "code": "395",
+   "label": "395 \u00b7 ACO Certification Ltd."
+  },
+  {
+   "code": "408",
+   "label": "408 \u00b7 CERES CERtification of Environmental Standards GmbH"
+  },
+  {
+   "code": "419",
+   "label": "419 \u00b7 Kiwa BCS Costa Rica Limitada"
+  },
+  {
+   "code": "421",
+   "label": "421 \u00b7 Vermont Organic Farmers, LLC"
+  },
+  {
+   "code": "449",
+   "label": "449 \u00b7 LETIS AUDIT & CERTIFICATION S.A."
+  },
+  {
+   "code": "451",
+   "label": "451 \u00b7 Global Culture"
+  },
+  {
+   "code": "457",
+   "label": "457 \u00b7 Monterey County Certified Organics"
+  },
+  {
+   "code": "479",
+   "label": "479 \u00b7 Bio.Inspecta"
+  },
+  {
+   "code": "483",
+   "label": "483 \u00b7 Rhode Island Department of Environmental Management"
+  },
+  {
+   "code": "485",
+   "label": "485 \u00b7 New Mexico Department of Agriculture, Organic Program"
+  },
+  {
+   "code": "493",
+   "label": "493 \u00b7 Yolo County Department of Agriculture"
+  },
+  {
+   "code": "509",
+   "label": "509 \u00b7 Utah Department of Agriculture and Food"
+  },
+  {
+   "code": "510",
+   "label": "510 \u00b7 Kentucky Department of Agriculture"
+  },
+  {
+   "code": "515",
+   "label": "515 \u00b7 Certificadora de Productos Organicos Eco-LOGICA S.A. (formerly Eco-LOGICA S.A.)"
+  },
+  {
+   "code": "535",
+   "label": "535 \u00b7 SCS Global Services, Inc."
+  },
+  {
+   "code": "540",
+   "label": "540 \u00b7 Iowa Department of Agriculture and Land Stewardship"
+  },
+  {
+   "code": "543",
+   "label": "543 \u00b7 New Hampshire Department of Agriculture, Markets & Food"
+  },
+  {
+   "code": "550",
+   "label": "550 \u00b7 Organizaci\u00f3n Internacional Agropecuaria"
+  },
+  {
+   "code": "552",
+   "label": "552 \u00b7 Quality Assurance International"
+  },
+  {
+   "code": "556",
+   "label": "556 \u00b7 CCOF Certification Services, LLC"
+  },
+  {
+   "code": "560",
+   "label": "560 \u00b7 New Jersey Department of Agriculture"
+  },
+  {
+   "code": "587",
+   "label": "587 \u00b7 Quality Certification Services"
+  },
+  {
+   "code": "622",
+   "label": "622 \u00b7 Organic Certifiers, Inc."
+  },
+  {
+   "code": "624",
+   "label": "624 \u00b7 Americert International"
+  },
+  {
+   "code": "625",
+   "label": "625 \u00b7 Servicio de Certificaci\u00f3n CAAE S.L.U."
+  },
+  {
+   "code": "635",
+   "label": "635 \u00b7 Colorado Department of Agriculture"
+  },
+  {
+   "code": "640",
+   "label": "640 \u00b7 IMOcert Latinoamerica LTDA"
+  },
+  {
+   "code": "643",
+   "label": "643 \u00b7 Pro-Cert Organic Systems, Ltd."
+  },
+  {
+   "code": "665",
+   "label": "665 \u00b7 Perry Johnson Registrars Food Safety, Inc."
+  },
+  {
+   "code": "678",
+   "label": "678 \u00b7 Maryland Department of Agriculture"
+  },
+  {
+   "code": "683",
+   "label": "683 \u00b7 Clemson University"
+  },
+  {
+   "code": "714",
+   "label": "714 \u00b7 MOFGA Certification Services, LLC - MCS"
+  },
+  {
+   "code": "717",
+   "label": "717 \u00b7 OnMark Certification Services"
+  },
+  {
+   "code": "727",
+   "label": "727 \u00b7 Oregon Department of Agriculture"
+  },
+  {
+   "code": "728",
+   "label": "728 \u00b7 Certificadora Mexicana de Productos y Procesos Ecologicos SC"
+  },
+  {
+   "code": "736",
+   "label": "736 \u00b7 Marin Organic Certified Agriculture"
+  },
+  {
+   "code": "777",
+   "label": "777 \u00b7 Stellar Certification Services"
+  },
+  {
+   "code": "788",
+   "label": "788 \u00b7 Ecocert SAS (formerly Ecocert SA)"
+  },
+  {
+   "code": "792",
+   "label": "792 \u00b7 International Certification Services, Inc (ICS Owned and Operated by WFCFO)"
+  },
+  {
+   "code": "799",
+   "label": "799 \u00b7 Ecoglobe, LLC"
+  },
+  {
+   "code": "815",
+   "label": "815 \u00b7 Oregon Tilth Certified Organic"
+  },
+  {
+   "code": "821",
+   "label": "821 \u00b7 Pennsylvania Certified Organic"
+  },
+  {
+   "code": "824",
+   "label": "824 \u00b7 Natural Food Certifiers"
+  },
+  {
+   "code": "826",
+   "label": "826 \u00b7 ZZZ__Test_Certifier_1"
+  },
+  {
+   "code": "843",
+   "label": "843 \u00b7 Nature\u2019s International Certification Services"
+  },
+  {
+   "code": "869",
+   "label": "869 \u00b7 BioAgriCert"
+  },
+  {
+   "code": "883",
+   "label": "883 \u00b7 Organic Crop Improvement Association"
+  },
+  {
+   "code": "909",
+   "label": "909 \u00b7 Where Food Comes From Organic"
+  },
+  {
+   "code": "946",
+   "label": "946 \u00b7 Oklahoma Department of Agriculture, Food and Forestry"
+  },
+  {
+   "code": "948",
+   "label": "948 \u00b7 Food Safety S.A."
+  },
+  {
+   "code": "957",
+   "label": "957 \u00b7 Ecocert ICO, LLC"
+  },
+  {
+   "code": "973",
+   "label": "973 \u00b7 Agricultural Services Certified Organic"
+  },
+  {
+   "code": "983",
+   "label": "983 \u00b7 Basin and Range Organics"
+  },
+  {
+   "code": "995",
+   "label": "995 \u00b7 Midwest Organic Services Association, Inc."
+  }
+ ],
+ "scopes": [
+  {
+   "id": "crops",
+   "label": "Crops"
+  },
+  {
+   "id": "livestock",
+   "label": "Livestock"
+  },
+  {
+   "id": "wildcrops",
+   "label": "Wild crops"
+  },
+  {
+   "id": "handling",
+   "label": "Handling"
+  }
+ ],
+ "groups": [
+  {
+   "id": "grains",
+   "label": "Grains, oilseeds & pulses"
+  },
+  {
+   "id": "forage",
+   "label": "Hay, pasture & forage"
+  },
+  {
+   "id": "vegetables",
+   "label": "Vegetables"
+  },
+  {
+   "id": "fruit",
+   "label": "Fruit"
+  },
+  {
+   "id": "nuts",
+   "label": "Tree nuts"
+  },
+  {
+   "id": "herbs",
+   "label": "Herbs & spices"
+  },
+  {
+   "id": "nursery",
+   "label": "Nursery, flowers & transplants"
+  },
+  {
+   "id": "mushrooms",
+   "label": "Mushrooms"
+  },
+  {
+   "id": "maple",
+   "label": "Maple"
+  },
+  {
+   "id": "dairy",
+   "label": "Dairy"
+  },
+  {
+   "id": "beef",
+   "label": "Beef & other cattle"
+  },
+  {
+   "id": "poultry",
+   "label": "Poultry & eggs"
+  },
+  {
+   "id": "otherlivestock",
+   "label": "Hogs, sheep, goats & other livestock"
+  },
+  {
+   "id": "othercrops",
+   "label": "Other or unclassified products"
+  }
+ ],
+ "exit_types": [
+  "open",
+  "surrendered",
+  "suspended",
+  "revoked",
+  "dropped_from_listing",
+  "transfer"
+ ],
+ "n_spells": 59988,
+ "n_spells_panel": 132525
+}

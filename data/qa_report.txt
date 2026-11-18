@@ -1,0 +1,38 @@
+Churn Explorer QA — 0 failure(s)
+
+[PASS] entries 2018 recount panel=3,618 explorer=3,618
+[PASS] exits 2018 recount panel=2,631 explorer=2,631
+[PASS] entries 2019 recount panel=3,395 explorer=3,395
+[PASS] exits 2019 recount panel=2,873 explorer=2,873
+[PASS] entries 2020 recount panel=3,006 explorer=3,006
+[PASS] exits 2020 recount panel=3,503 explorer=3,503
+[PASS] entries 2021 recount panel=3,096 explorer=3,096
+[PASS] exits 2021 recount panel=3,726 explorer=3,726
+[PASS] entries 2022 recount panel=2,332 explorer=2,332
+[PASS] exits 2022 recount panel=3,860 explorer=3,860
+[PASS] entries 2023 recount panel=2,124 explorer=2,124
+[PASS] exits 2023 recount panel=3,069 explorer=3,069
+[PASS] entries 2024 recount panel=4,153 explorer=4,153
+[PASS] exits 2024 recount panel=2,881 explorer=2,881
+[PASS] entries 2025 recount panel=3,051 explorer=3,051
+[PASS] exits 2025 recount panel=2,867 explorer=2,867
+[PASS] entries 2026 recount panel=2,470 explorer=2,470
+[PASS] exits 2026 recount panel=2,165 explorer=2,165
+[PASS] spells.json reproduces state and certifier tables for every year 
+
+Stock flow (U.S., 1 Jan). The gap is mostly exits of exit-only spells (operations first seen already exited, start unknown): they count as exits but were never in the stock. The rest are back-dated records.
+  2018: stock 27,311 -> predicted 28,360, observed 28,543 (diff +183; exit-only exits 179)
+  2019: stock 28,543 -> predicted 28,906, observed 29,113 (diff +207; exit-only exits 192)
+  2020: stock 29,113 -> predicted 28,640, observed 29,101 (diff +461; exit-only exits 389)
+  2021: stock 29,101 -> predicted 28,503, observed 29,547 (diff +1,044; exit-only exits 879)
+  2022: stock 29,547 -> predicted 27,856, observed 28,349 (diff +493; exit-only exits 299)
+  2023: stock 28,349 -> predicted 27,330, observed 27,403 (diff +73; exit-only exits 69)
+  2024: stock 27,403 -> predicted 28,616, observed 28,774 (diff +158; exit-only exits 112)
+  2025: stock 28,774 -> predicted 28,888, observed 29,074 (diff +186; exit-only exits 91)
+[PASS] commodity coverage >= 95% of crops/livestock/wild-crops spells (98.5%)
+  production spells with no commodity text: 0.9%; 'Other' only: 0.6%
+
+Spot rows (for checking against OID):
+  Tennessee 2024: stock 91, entries 25, exits 12, net 13
+  California 2024: stock 5029, entries 783, exits 475, net 308
+  Vermont 2024: stock 841, entries 57, exits 32, net 25

@@ -1,0 +1,95 @@
+{
+  "_note": "Commodity groups for the Churn Explorer. Each OID item is 'Category: item' or a bare item. An item is assigned by its OID category first (category_map, case-insensitive substring), then by keywords in the item text (keyword groups, regex, case-insensitive, word-start anchored). An item can match several keyword groups. A spell belongs to every group any of its crops, livestock or wild-crops items match. Handling items are not classified. Order of 'groups' is the display order. Keywords are matched anywhere in the item text unless the pattern has \\b. Ambiguous: bare 'beans'/'peas' -> Vegetables, 'dry beans' -> Grains; 'Other: Corn' -> Grains (field corn assumed); cotton and tobacco fall to Other. Keywords extended on 18 Nov 2026 after review of data/commodity_audit.csv (about 80 clearly identifiable items, e.g. pak choi, escarole, dandelion, marigold, kumquat).",
+  "groups": [
+    {
+      "id": "grains",
+      "label": "Grains, oilseeds & pulses"
+    },
+    {
+      "id": "forage",
+      "label": "Hay, pasture & forage"
+    },
+    {
+      "id": "vegetables",
+      "label": "Vegetables"
+    },
+    {
+      "id": "fruit",
+      "label": "Fruit"
+    },
+    {
+      "id": "nuts",
+      "label": "Tree nuts"
+    },
+    {
+      "id": "herbs",
+      "label": "Herbs & spices"
+    },
+    {
+      "id": "nursery",
+      "label": "Nursery, flowers & transplants"
+    },
+    {
+      "id": "mushrooms",
+      "label": "Mushrooms"
+    },
+    {
+      "id": "maple",
+      "label": "Maple"
+    },
+    {
+      "id": "dairy",
+      "label": "Dairy"
+    },
+    {
+      "id": "beef",
+      "label": "Beef & other cattle"
+    },
+    {
+      "id": "poultry",
+      "label": "Poultry & eggs"
+    },
+    {
+      "id": "otherlivestock",
+      "label": "Hogs, sheep, goats & other livestock"
+    },
+    {
+      "id": "othercrops",
+      "label": "Other or unclassified products"
+    }
+  ],
+  "category_map": {
+    "vegetables": "vegetables",
+    "microgreens": "vegetables",
+    "sprouts": "vegetables",
+    "fruit": "fruit",
+    "nuts": "nuts",
+    "herbs": "herbs",
+    "spices": "herbs",
+    "nursery": "nursery",
+    "flowers": "nursery",
+    "fungi": "mushrooms",
+    "pasture": "forage",
+    "hay": "forage",
+    "poultry": "poultry",
+    "swine": "otherlivestock",
+    "sheep": "otherlivestock",
+    "goats": "otherlivestock"
+  },
+  "keywords": {
+    "grains": "corn|maize|wheat|\\boats?\\b|barley|\\brye\\b|triticale|spelt|emmer|einkorn|\\brice\\b|wild rice|sorghum|milo\\b|millet|buckwheat|quinoa|amaranth|teff|soy|flax|sunflower seed|oil ?seed|canola|rapeseed|safflower|camelina|hemp|peanut|dry beans?|black beans|pinto|kidney beans|navy beans|chickpea|garbanzo|lentil|field peas?|cow ?peas|small grains?|\\bgrains?\\b|edible beans|fava|kernza|sesame|cereals",
+    "forage": "\\bhay\\b|haylage|pasture|alfalfa|forage|silage|baleage|balage|\\bstraw\\b|grass\\b|grasses|clover|timothy|orchardgrass|fescue|brome|sudan|range ?land|grazing|vetch|\\brape\\b|turnips? \\(forage|festulolium",
+    "vegetables": "vegetable|tomat|lettuce|kale|spinach|chard|collard|cabbage|broccoli|cauliflower|brussels|carrot|beet|radish|turnip|rutabaga|parsnip|onion|garlic|leek|shallot|scallion|potato|\\byams?\\b|cucumber|squash|zucchini|pumpkin|pepper|eggplant|okra|celer|asparagus|artichoke|arugula|greens|mesclun|bok choy|pac choi|tatsoi|mizuna|kohlrabi|sweet corn|\\bbeans?\\b|green beans|\\bpeas\\b|snow peas|sugar snap|edamame|microgreen|sprout|endive|radicchio|chicory|fennel|cress|salad|rhubarb|mustard|sorrel|gourd|cilantro|ramps|fiddlehead|horseradish|jicama|sweet potato|pak cho|pac cho|bok cho|escarole|daikon|romanesco|\\bnapa\\b|romaine|purslane|\\bpeas?\\b|pea shoots|burdock|frisee|savoy|spring mix|mache|sunchoke|salsify|orach|claytonia|cardoon|brassica|taro\\b|succotash",
+    "fruit": "fruit|apple|\\bpears?\\b|peach|nectarine|\\bplums?\\b|prune|cherr|apricot|grape|berr|citrus|orange|lemon|\\blimes?\\b|mandarin|tangerine|avocado|mango|papaya|banana|pineapple|melon|cantaloupe|kiwi|\\bfigs?\\b|\\bdates?\\b|pomegranate|persimmon|\\bolives?\\b|quince|currant|guava|passion ?fruit|lychee|coconut|pawpaw|aronia|haskap|jujube|tomatillo|pluot|canteloupe|cantaloupe|tangelo|kumquat|cherimoya|paw ?paw|soursop|guanabana",
+    "nuts": "almond|walnut|pecan|pistachio|hazelnut|filbert|macadamia|chestnut|cashew|tree nuts?",
+    "herbs": "herb|spice|basil|coriander|parsley|\\bmint\\b|peppermint|spearmint|\\bdill\\b|oregano|thyme|rosemary|\\bsage\\b|lavender|chamomile|ginger|turmeric|\\bhops?\\b|tarragon|chives|lemongrass|stevia|echinacea|tulsi|calendula|medicinal|marjoram|savory|borage|catnip|nettle|lovage|chervil|comfrey|yarrow|hyssop|ginseng|goldenseal|dandelion|valerian|\\bmints\\b|feverfew|motherwort|skullcap|shiso|marshmallow|arnica|mullein|mugwort|angelica|epazote|vervain|moringa|spilanthes|astragalus|elecampane|wormwood|ashwag|bergamot|boneset|horehound|\\brue\\b|sweet annie|st\\.? john|black cohosh|tansy|goldenrod|chickweed|cumin|lemon balm",
+    "nursery": "nursery|flower|transplant|seedlings?|\\bstarts\\b|bedding|ornamental|\\bsod\\b|\\btrees?\\b|tulip|dahlia|\\bbulbs?\\b|potted|greenhouse plants|marigold|nasturtium|zinnia|cosmos|celosia|california poppy|\\bpopp(y|ies)\\b|roses?\\b|statice|verbena|rudbeckia|snapdragon|eucalyptus",
+    "mushrooms": "mushroom|shiitake|oyster|maitake|reishi|lion'?s mane|fungi|mycel",
+    "maple": "maple|\\bsap\\b|syrup|birch",
+    "dairy": "milk|dairy|milking|replacement|heifer|dry cows?|lactating",
+    "beef": "beef|cattle|\\bcows?\\b|\\bcalf\\b|calves|steers?|\\bbulls?\\b|feeder|stocker|cow.calf|bison|buffalo",
+    "poultry": "poultry|chicken|\\bhens?\\b|\\blayers?\\b|laying|broilers?|pullets?|turkeys?|\\bducks?\\b|geese|goose|quail|\\beggs?\\b|fowl",
+    "otherlivestock": "swine|\\bhogs?\\b|\\bpigs?\\b|pork|sheep|\\blambs?\\b|\\bewes?\\b|\\bgoats?\\b|\\bkids\\b|rabbit|horses?|alpaca|llama|apiar|honey|\\bbees?\\b|aquacult|\\bfish"
+  },
+  "exclude_items": "^(other|fallow|cover crops?|green manure|see addendum|see attached|n/?a|none|land|land eligible for organic production|new seeding|woods|woodland|greenhouse|outdoor access|all eligible for organic slaughter|some eligible for organic slaughter|none eligible for organic slaughter|organic|processing|packaging|mixed|various|crops?|green)$"
+}

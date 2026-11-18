@@ -1,0 +1,15 @@
+{
+  "authors": [
+    {
+      "name": "Taiwo Fausiyat Adesiyan",
+      "family": "Adesiyan",
+      "given": "Taiwo Fausiyat",
+      "orcid": "0000-0002-2023-3624",
+      "email": "adesiyanfausiyat010@gmail.com",
+      "affiliation": "Middle Tennessee State University, Murfreesboro, Tennessee, USA",
+      "roles": ["Conceptualization", "Data curation", "Methodology", "Software", "Validation", "Writing - original draft"],
+      "corresponding": true
+    }
+  ],
+  "collaborators": []
+}
